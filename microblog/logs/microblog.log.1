@@ -1,4 +1,4 @@
-2019-09-01 17:32:06,816 ERROR: Exception on /reset_password_request [POST] [in c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py:1891]
+2019-09-02 22:35:19,785 ERROR: Exception on / [GET] [in c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,15 +12,84 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 1935, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\routes.py", line 165, in reset_password_request
-    send_password_reset_email(user)
-  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\email.py", line 17, in send_password_reset_email
-    token = user.get_reset_password_token()
-  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\models.py", line 63, in get_reset_password_token
-    return jwt.encode(
-AttributeError: module 'jwt' has no attribute 'encode'
-2019-09-01 17:34:09,914 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:44]
-2019-09-01 17:34:22,945 ERROR: Exception on /reset_password_request [POST] [in c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py:1891]
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\routes.py", line 39, in index
+    prev_url=prev_url)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\templates\base.html", line 1, in template
+    {% extends "bootstrap/base.html" }
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\templates\base.html", line 1, in template
+    {% extends "bootstrap/base.html" }
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 883, in subparse
+    rv = self.parse_statement()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 274, in parse_extends
+    node.template = self.parse_expression()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 546, in parse_unary
+    node = self.parse_primary()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\parser.py", line 564, in parse_primary
+    next(self.stream)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\lexer.py", line 359, in __next__
+    self.current = next(self._iter)
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\lexer.py", line 562, in wrap
+    for lineno, token, value in stream:
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\jinja2\lexer.py", line 683, in tokeniter
+    filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+2019-09-02 22:36:05,041 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:46]
+2019-09-02 22:42:04,270 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:46]
+2019-09-02 22:45:40,350 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:46]
+2019-09-02 23:14:16,714 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:46]
+2019-09-03 19:47:56,259 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:48]
+2019-09-03 19:55:31,282 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:48]
+2019-09-03 19:59:17,904 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:48]
+2019-09-04 23:13:08,569 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-04 23:13:12,570 ERROR: Exception on / [GET] [in c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -30,17 +99,10 @@ Traceback (most recent call last):
     reraise(exc_type, exc_value, tb)
   File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\routes.py", line 165, in reset_password_request
-    send_password_reset_email(user)
-  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\email.py", line 17, in send_password_reset_email
-    token = user.get_reset_password_token()
-  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\models.py", line 64, in get_reset_password_token
-    {"reset_password": self.id, "exp": time() + expires_in},
-NameError: name 'self' is not defined
-2019-09-01 17:36:17,523 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:44]
-2019-09-02 22:13:39,794 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:46]
-2019-09-02 22:35:14,964 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:46]
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 1947, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\tomas\appdata\local\programs\python\python36\lib\site-packages\flask\app.py", line 2241, in preprocess_request
+    rv = func()
+  File "C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\routes.py", line 16, in before_request
+    g.locale = str(get_locale())
+NameError: name 'g' is not defined
