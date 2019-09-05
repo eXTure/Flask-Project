@@ -17,3 +17,9 @@ Traceback (most recent call last):
 NameError: name 'g' is not defined
 2019-09-04 23:14:00,635 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
 2019-09-04 23:36:45,007 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-05 21:21:16,127 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-05 21:21:41,214 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-05 21:25:46,648 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-05 21:29:24,098 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-05 21:35:29,852 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-05 21:45:10,854 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
