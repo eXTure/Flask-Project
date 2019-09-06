@@ -23,3 +23,6 @@ NameError: name 'g' is not defined
 2019-09-05 21:29:24,098 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
 2019-09-05 21:35:29,852 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
 2019-09-05 21:45:10,854 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-06 18:12:58,157 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-06 18:13:11,121 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
+2019-09-06 20:57:41,626 INFO: Microblog startup [in C:\Users\tomas\Desktop\Python\Website-with-Flask\microblog\app\__init__.py:52]
