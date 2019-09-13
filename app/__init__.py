@@ -11,6 +11,7 @@ from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from config import Config
 from elasticsearch import Elasticsearch
+from ssl import create_default_context
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -21,6 +22,14 @@ mail = Mail()
 bootstrap = Bootstrap()
 moment = Moment()
 babel = Babel()
+#context = create_default_context(cafile='')
+es = Elasticsearch(
+    ['localhost', 'otherhost'],
+    http_auth=('user', 'secret'),
+    scheme="https",
+    port=443,
+    ssl_context=context,
+)
 
 
 def create_app(config_class=Config):
@@ -34,6 +43,8 @@ def create_app(config_class=Config):
     bootstrap.init_app(app)
     moment.init_app(app)
     babel.init_app(app)
+
+
 
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
         if app.config['ELASTICSEARCH_URL'] else None
