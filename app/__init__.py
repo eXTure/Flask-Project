@@ -23,13 +23,13 @@ bootstrap = Bootstrap()
 moment = Moment()
 babel = Babel()
 #context = create_default_context(cafile='')
-es = Elasticsearch(
-    ['localhost', 'otherhost'],
-    http_auth=('user', 'secret'),
-    scheme="https",
-    port=443,
-    ssl_context=context,
-)
+#es = Elasticsearch(
+#    ['localhost', 'otherhost'],
+#    http_auth=('user', 'secret'),
+#    scheme="https",
+#    port=443,
+#    ssl_context=context,
+#)
 
 
 def create_app(config_class=Config):
