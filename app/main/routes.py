@@ -32,6 +32,8 @@ def index():
         post = Post(body=form.post.data, author=current_user,
                     language=language)
         db.session.add(post)
+        db.session.merge(post)
+        db.session.flush()
         db.session.commit()
         flash(_('Your post is now live!'))
         return redirect(url_for('main.index'))
