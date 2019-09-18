@@ -8,16 +8,6 @@ import jwt
 from app import db, login
 from app.search import add_to_index, remove_from_index, query_index
 
-#@models_committed.connect_via(app)
-#def on_models_committed(sender, changes):
-#    for obj, change in changes:
-#        if change == 'insert' and hasattr(obj, '__commit_insert__'):
-#            obj.__commit_insert__()
-#        elif change == 'update' and hasattr(obj, '__commit_update__'):
-#            obj.__commit_update__()
-#        elif change == 'delete' and hasattr(obj, '__commit_delete__'):
-#            obj.__commit_delete__()
-
 class SearchableMixin(object):
     @classmethod
     def search(cls, expression, page, per_page):
